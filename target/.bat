@@ -1,0 +1,1 @@
+java -jar QuoterUI-1.0-SNAPSHOT.jar
