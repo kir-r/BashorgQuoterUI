@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         String inputNumber;
         URLCompiler compilerURL = new URLCompiler();
-        UIManager.put("OptionPane.cancelButtonText", "достоточно");
+        UIManager.put("OptionPane.cancelButtonText", "достаточно");
         UIManager.put("OptionPane.okButtonText", "тык!");
 
         UIManager.put("OptionPane.messageFont", new Font("Verdana", Font.BOLD, 14));
