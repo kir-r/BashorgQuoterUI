@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 public class URLCompiler {
 
@@ -23,7 +24,8 @@ public class URLCompiler {
         StringBuilder stringBuilder = new StringBuilder();
         try {
             URL bashorg = new URL(compiledURLAddress);
-            BufferedReader inputStream = new BufferedReader(new InputStreamReader(bashorg.openStream()));
+            // StandardCharsets.UTF_8 doesn't work :(
+            BufferedReader inputStream = new BufferedReader(new InputStreamReader(bashorg.openStream(), StandardCharsets.UTF_8));
             String inputLine;
             while ((inputLine = inputStream.readLine()) != null) {
                 stringBuilder.append(inputLine);
